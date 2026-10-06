@@ -1,0 +1,9 @@
+model,deployment_tier,memory_measured_mb,latency_measured_ms,model_size_measured_kb,meets_budget
+LogisticRegression,Cloud,530.352,0.108800,1.030,Yes
+LogisticRegression,Edge,530.352,0.108800,1.030,Yes
+LogisticRegression,Mobile,530.352,0.108800,1.030,No
+LogisticRegression,TinyML,530.352,0.108800,1.030,No
+RandomForestClassifier,Cloud,530.898,5.093050,284.071,Yes
+RandomForestClassifier,Edge,530.898,5.093050,284.071,Yes
+RandomForestClassifier,Mobile,530.898,5.093050,284.071,No
+RandomForestClassifier,TinyML,530.898,5.093050,284.071,No
