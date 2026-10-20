@@ -1,0 +1,60 @@
+Python: 3.11.8
+Platform: Windows-10-10.0.26200-SP0
+Required Python: 3.11.8
+Python match: True
+
+COURSE REQUIREMENTS
+numpy: expected 1.26.4; installed 1.26.4; MATCH
+pandas: expected 2.2.2; installed not installed (not used in Lab 2); ABSENT
+scikit-learn: expected 1.5.0; installed 1.5.0; MATCH
+scipy: expected 1.13.1; installed 1.13.1; MATCH
+matplotlib: expected 3.9.0; installed 3.9.0; MATCH
+seaborn: expected 0.13.2; installed not installed (not used in Lab 2); ABSENT
+torch: expected 2.3.1; installed 2.3.1; MATCH
+torchvision: expected 0.18.1; installed not installed (not used in Lab 2); ABSENT
+torchinfo: expected 1.8.0; installed not installed (not used in Lab 2); ABSENT
+thop: expected 0.1.1.post2209072238; installed not installed (not used in Lab 2); ABSENT
+onnx: expected 1.16.1; installed not installed (not used in Lab 2); ABSENT
+onnxruntime: expected 1.18.0; installed not installed (not used in Lab 2); ABSENT
+mlflow: expected 2.14.1; installed not installed (not used in Lab 2); ABSENT
+memory-profiler: expected 0.61.0; installed not installed (not used in Lab 2); ABSENT
+psutil: expected 5.9.8; installed not installed (not used in Lab 2); ABSENT
+codecarbon: expected 2.4.2; installed not installed (not used in Lab 2); ABSENT
+fastapi: expected 0.111.0; installed not installed (not used in Lab 2); ABSENT
+uvicorn: expected 0.30.1; installed not installed (not used in Lab 2); ABSENT
+pytest: expected 8.2.2; installed not installed (not used in Lab 2); ABSENT
+httpx: expected 0.27.0; installed not installed (not used in Lab 2); ABSENT
+locust: expected 2.28.0; installed not installed (not used in Lab 2); ABSENT
+requests: expected 2.32.3; installed not installed (not used in Lab 2); ABSENT
+pyarrow: expected 16.1.0; installed not installed (not used in Lab 2); ABSENT
+joblib: expected 1.4.2; installed 1.4.2; MATCH
+tqdm: expected 4.66.4; installed not installed (not used in Lab 2); ABSENT
+
+ALL INSTALLED DISTRIBUTIONS
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+contourpy==1.3.3
+cycler==0.12.1
+filelock==4.1.1
+fonttools==4.66.1
+fsspec==2026.9.0
+intel-openmp==2021.4.0
+joblib==1.4.2
+kiwisolver==1.5.1
+matplotlib==3.9.0
+mkl==2021.4.0
+mpmath==1.3.0
+networkx==3.6.1
+numpy==1.26.4
+packaging==26.3
+pillow==12.3.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+scikit-learn==1.5.0
+scipy==1.13.1
+six==1.17.0
+sympy==1.14.0
+tbb==2021.13.1
+threadpoolctl==3.7.0
+torch==2.3.1
+typing_extensions==4.16.0

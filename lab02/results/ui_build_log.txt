@@ -1,0 +1,401 @@
+Python: 3.11.8
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+contourpy==1.3.3
+cycler==0.12.1
+filelock==4.1.1
+fonttools==4.66.1
+fsspec==2026.9.0
+intel-openmp==2021.4.0
+joblib==1.4.2
+kiwisolver==1.5.1
+matplotlib==3.9.0
+mkl==2021.4.0
+mpmath==1.3.0
+networkx==3.6.1
+numpy==1.26.4
+packaging==26.3
+pillow==12.3.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+scikit-learn==1.5.0
+scipy==1.13.1
+six==1.17.0
+sympy==1.14.0
+tbb==2021.13.1
+threadpoolctl==3.7.0
+torch==2.3.1
+typing_extensions==4.16.0
+TASK 1
+Training: (1257, 64) (1257, 10)
+Testing:  (540, 64) (540, 10)
+
+TASK 2
+Hidden width: 16
+W1 (64, 16)
+b1 (16,)
+W2 (16, 16)
+b2 (16,)
+W3 (16, 10)
+b3 (10,)
+Hidden width: 64
+W1 (64, 64)
+b1 (64,)
+W2 (64, 64)
+b2 (64,)
+W3 (64, 10)
+b3 (10,)
+Network diagram saved: C:\Users\rojob\Documents\ChatGPT\Machine Learning\lab02\results\task-2-network-diagram.png
+Printable diagram saved: C:\Users\rojob\Documents\ChatGPT\Machine Learning\lab02\results\task-2-network-diagram.pdf
+
+TASK 3
+Width 16 output shape: (32, 10) row sums: PASS
+Width 64 output shape: (32, 10) row sums: PASS
+
+TASK 4
+Width 16: initial loss = 2.30258349
+Width 64: initial loss = 2.30259491
+Expected approximately: 2.302585092994046
+
+TASK 5
+W=16 W1(10, 8): relative error=1.232e-15
+W=16 W1(37, 13): relative error=0.000e+00
+W=16 W1(34, 4): relative error=1.329e-15
+W=16 W1(4, 1): relative error=2.048e-14
+W=16 W1(39, 4): relative error=0.000e+00
+W=16 W1(60, 4): relative error=1.329e-15
+W=16 W3(11, 0): relative error=2.035e-14
+W=16 W3(14, 2): relative error=1.462e-15
+W=16 W2(10, 15): relative error=2.020e-14
+W=16 W1(15, 4): relative error=0.000e+00
+Width 16: 10/10 passed
+W=64 W3(45, 2): relative error=1.304e-15
+W=64 W1(16, 52): relative error=0.000e+00
+W=64 W1(46, 26): relative error=0.000e+00
+W=64 W1(31, 45): relative error=0.000e+00
+W=64 W3(35, 1): relative error=0.000e+00
+W=64 W2(33, 23): relative error=1.422e-15
+W=64 W1(37, 52): relative error=2.032e-14
+W=64 W2(62, 45): relative error=0.000e+00
+W=64 W2(11, 45): relative error=2.053e-14
+W=64 W1(60, 44): relative error=1.224e-15
+Width 64: 10/10 passed
+
+TASK 6
+W=16 lr=0.001 epoch=01 loss=2.302583
+W=16 lr=0.001 epoch=02 loss=2.302583
+W=16 lr=0.001 epoch=03 loss=2.302582
+W=16 lr=0.001 epoch=04 loss=2.302581
+W=16 lr=0.001 epoch=05 loss=2.302580
+W=16 lr=0.001 epoch=06 loss=2.302580
+W=16 lr=0.001 epoch=07 loss=2.302578
+W=16 lr=0.001 epoch=08 loss=2.302577
+W=16 lr=0.001 epoch=09 loss=2.302577
+W=16 lr=0.001 epoch=10 loss=2.302576
+W=16 lr=0.001 epoch=11 loss=2.302575
+W=16 lr=0.001 epoch=12 loss=2.302574
+W=16 lr=0.001 epoch=13 loss=2.302573
+W=16 lr=0.001 epoch=14 loss=2.302573
+W=16 lr=0.001 epoch=15 loss=2.302572
+W=16 lr=0.001 epoch=16 loss=2.302571
+W=16 lr=0.001 epoch=17 loss=2.302571
+W=16 lr=0.001 epoch=18 loss=2.302570
+W=16 lr=0.001 epoch=19 loss=2.302569
+W=16 lr=0.001 epoch=20 loss=2.302569
+W=16 lr=0.001 epoch=21 loss=2.302568
+W=16 lr=0.001 epoch=22 loss=2.302567
+W=16 lr=0.001 epoch=23 loss=2.302567
+W=16 lr=0.001 epoch=24 loss=2.302566
+W=16 lr=0.001 epoch=25 loss=2.302565
+W=16 lr=0.001 epoch=26 loss=2.302564
+W=16 lr=0.001 epoch=27 loss=2.302564
+W=16 lr=0.001 epoch=28 loss=2.302563
+W=16 lr=0.001 epoch=29 loss=2.302562
+W=16 lr=0.001 epoch=30 loss=2.302562
+W=16 lr=0.001 epoch=31 loss=2.302561
+W=16 lr=0.001 epoch=32 loss=2.302560
+W=16 lr=0.001 epoch=33 loss=2.302560
+W=16 lr=0.001 epoch=34 loss=2.302559
+W=16 lr=0.001 epoch=35 loss=2.302558
+W=16 lr=0.001 epoch=36 loss=2.302558
+W=16 lr=0.001 epoch=37 loss=2.302557
+W=16 lr=0.001 epoch=38 loss=2.302557
+W=16 lr=0.001 epoch=39 loss=2.302556
+W=16 lr=0.001 epoch=40 loss=2.302555
+W=16 lr=0.001 epoch=41 loss=2.302554
+W=16 lr=0.001 epoch=42 loss=2.302554
+W=16 lr=0.001 epoch=43 loss=2.302553
+W=16 lr=0.001 epoch=44 loss=2.302553
+W=16 lr=0.001 epoch=45 loss=2.302552
+W=16 lr=0.001 epoch=46 loss=2.302551
+W=16 lr=0.001 epoch=47 loss=2.302551
+W=16 lr=0.001 epoch=48 loss=2.302550
+W=16 lr=0.001 epoch=49 loss=2.302550
+W=16 lr=0.001 epoch=50 loss=2.302549
+W=16 lr=0.01 epoch=01 loss=2.302582
+W=16 lr=0.01 epoch=02 loss=2.302578
+W=16 lr=0.01 epoch=03 loss=2.302572
+W=16 lr=0.01 epoch=04 loss=2.302566
+W=16 lr=0.01 epoch=05 loss=2.302558
+W=16 lr=0.01 epoch=06 loss=2.302552
+W=16 lr=0.01 epoch=07 loss=2.302541
+W=16 lr=0.01 epoch=08 loss=2.302533
+W=16 lr=0.01 epoch=09 loss=2.302533
+W=16 lr=0.01 epoch=10 loss=2.302530
+W=16 lr=0.01 epoch=11 loss=2.302528
+W=16 lr=0.01 epoch=12 loss=2.302521
+W=16 lr=0.01 epoch=13 loss=2.302518
+W=16 lr=0.01 epoch=14 loss=2.302517
+W=16 lr=0.01 epoch=15 loss=2.302513
+W=16 lr=0.01 epoch=16 loss=2.302509
+W=16 lr=0.01 epoch=17 loss=2.302511
+W=16 lr=0.01 epoch=18 loss=2.302508
+W=16 lr=0.01 epoch=19 loss=2.302502
+W=16 lr=0.01 epoch=20 loss=2.302501
+W=16 lr=0.01 epoch=21 loss=2.302500
+W=16 lr=0.01 epoch=22 loss=2.302498
+W=16 lr=0.01 epoch=23 loss=2.302498
+W=16 lr=0.01 epoch=24 loss=2.302496
+W=16 lr=0.01 epoch=25 loss=2.302493
+W=16 lr=0.01 epoch=26 loss=2.302491
+W=16 lr=0.01 epoch=27 loss=2.302490
+W=16 lr=0.01 epoch=28 loss=2.302489
+W=16 lr=0.01 epoch=29 loss=2.302487
+W=16 lr=0.01 epoch=30 loss=2.302488
+W=16 lr=0.01 epoch=31 loss=2.302486
+W=16 lr=0.01 epoch=32 loss=2.302485
+W=16 lr=0.01 epoch=33 loss=2.302485
+W=16 lr=0.01 epoch=34 loss=2.302485
+W=16 lr=0.01 epoch=35 loss=2.302483
+W=16 lr=0.01 epoch=36 loss=2.302482
+W=16 lr=0.01 epoch=37 loss=2.302482
+W=16 lr=0.01 epoch=38 loss=2.302481
+W=16 lr=0.01 epoch=39 loss=2.302481
+W=16 lr=0.01 epoch=40 loss=2.302479
+W=16 lr=0.01 epoch=41 loss=2.302479
+W=16 lr=0.01 epoch=42 loss=2.302478
+W=16 lr=0.01 epoch=43 loss=2.302477
+W=16 lr=0.01 epoch=44 loss=2.302477
+W=16 lr=0.01 epoch=45 loss=2.302477
+W=16 lr=0.01 epoch=46 loss=2.302476
+W=16 lr=0.01 epoch=47 loss=2.302476
+W=16 lr=0.01 epoch=48 loss=2.302474
+W=16 lr=0.01 epoch=49 loss=2.302475
+W=16 lr=0.01 epoch=50 loss=2.302475
+W=16 lr=0.1 epoch=01 loss=2.302620
+W=16 lr=0.1 epoch=02 loss=2.302586
+W=16 lr=0.1 epoch=03 loss=2.302556
+W=16 lr=0.1 epoch=04 loss=2.302538
+W=16 lr=0.1 epoch=05 loss=2.302519
+W=16 lr=0.1 epoch=06 loss=2.302502
+W=16 lr=0.1 epoch=07 loss=2.302501
+W=16 lr=0.1 epoch=08 loss=2.302517
+W=16 lr=0.1 epoch=09 loss=2.302536
+W=16 lr=0.1 epoch=10 loss=2.302547
+W=16 lr=0.1 epoch=11 loss=2.302520
+W=16 lr=0.1 epoch=12 loss=2.302491
+W=16 lr=0.1 epoch=13 loss=2.302497
+W=16 lr=0.1 epoch=14 loss=2.302506
+W=16 lr=0.1 epoch=15 loss=2.302480
+W=16 lr=0.1 epoch=16 loss=2.302515
+W=16 lr=0.1 epoch=17 loss=2.302528
+W=16 lr=0.1 epoch=18 loss=2.302504
+W=16 lr=0.1 epoch=19 loss=2.302447
+W=16 lr=0.1 epoch=20 loss=2.302443
+W=16 lr=0.1 epoch=21 loss=2.302420
+W=16 lr=0.1 epoch=22 loss=2.302385
+W=16 lr=0.1 epoch=23 loss=2.302345
+W=16 lr=0.1 epoch=24 loss=2.302330
+W=16 lr=0.1 epoch=25 loss=2.302293
+W=16 lr=0.1 epoch=26 loss=2.302246
+W=16 lr=0.1 epoch=27 loss=2.302200
+W=16 lr=0.1 epoch=28 loss=2.302108
+W=16 lr=0.1 epoch=29 loss=2.301994
+W=16 lr=0.1 epoch=30 loss=2.301812
+W=16 lr=0.1 epoch=31 loss=2.301567
+W=16 lr=0.1 epoch=32 loss=2.301208
+W=16 lr=0.1 epoch=33 loss=2.300599
+W=16 lr=0.1 epoch=34 loss=2.299513
+W=16 lr=0.1 epoch=35 loss=2.297436
+W=16 lr=0.1 epoch=36 loss=2.292736
+W=16 lr=0.1 epoch=37 loss=2.280440
+W=16 lr=0.1 epoch=38 loss=2.239264
+W=16 lr=0.1 epoch=39 loss=2.130525
+W=16 lr=0.1 epoch=40 loss=1.964779
+W=16 lr=0.1 epoch=41 loss=1.734815
+W=16 lr=0.1 epoch=42 loss=1.565601
+W=16 lr=0.1 epoch=43 loss=1.469692
+W=16 lr=0.1 epoch=44 loss=1.276818
+W=16 lr=0.1 epoch=45 loss=1.084170
+W=16 lr=0.1 epoch=46 loss=1.028863
+W=16 lr=0.1 epoch=47 loss=0.903652
+W=16 lr=0.1 epoch=48 loss=1.161240
+W=16 lr=0.1 epoch=49 loss=0.821416
+W=16 lr=0.1 epoch=50 loss=1.432382
+W=64 lr=0.001 epoch=01 loss=2.302594
+W=64 lr=0.001 epoch=02 loss=2.302593
+W=64 lr=0.001 epoch=03 loss=2.302592
+W=64 lr=0.001 epoch=04 loss=2.302590
+W=64 lr=0.001 epoch=05 loss=2.302589
+W=64 lr=0.001 epoch=06 loss=2.302587
+W=64 lr=0.001 epoch=07 loss=2.302585
+W=64 lr=0.001 epoch=08 loss=2.302583
+W=64 lr=0.001 epoch=09 loss=2.302582
+W=64 lr=0.001 epoch=10 loss=2.302581
+W=64 lr=0.001 epoch=11 loss=2.302579
+W=64 lr=0.001 epoch=12 loss=2.302578
+W=64 lr=0.001 epoch=13 loss=2.302576
+W=64 lr=0.001 epoch=14 loss=2.302575
+W=64 lr=0.001 epoch=15 loss=2.302573
+W=64 lr=0.001 epoch=16 loss=2.302571
+W=64 lr=0.001 epoch=17 loss=2.302570
+W=64 lr=0.001 epoch=18 loss=2.302569
+W=64 lr=0.001 epoch=19 loss=2.302567
+W=64 lr=0.001 epoch=20 loss=2.302565
+W=64 lr=0.001 epoch=21 loss=2.302564
+W=64 lr=0.001 epoch=22 loss=2.302562
+W=64 lr=0.001 epoch=23 loss=2.302561
+W=64 lr=0.001 epoch=24 loss=2.302559
+W=64 lr=0.001 epoch=25 loss=2.302557
+W=64 lr=0.001 epoch=26 loss=2.302555
+W=64 lr=0.001 epoch=27 loss=2.302553
+W=64 lr=0.001 epoch=28 loss=2.302551
+W=64 lr=0.001 epoch=29 loss=2.302549
+W=64 lr=0.001 epoch=30 loss=2.302548
+W=64 lr=0.001 epoch=31 loss=2.302547
+W=64 lr=0.001 epoch=32 loss=2.302545
+W=64 lr=0.001 epoch=33 loss=2.302544
+W=64 lr=0.001 epoch=34 loss=2.302542
+W=64 lr=0.001 epoch=35 loss=2.302540
+W=64 lr=0.001 epoch=36 loss=2.302538
+W=64 lr=0.001 epoch=37 loss=2.302537
+W=64 lr=0.001 epoch=38 loss=2.302535
+W=64 lr=0.001 epoch=39 loss=2.302534
+W=64 lr=0.001 epoch=40 loss=2.302532
+W=64 lr=0.001 epoch=41 loss=2.302531
+W=64 lr=0.001 epoch=42 loss=2.302529
+W=64 lr=0.001 epoch=43 loss=2.302528
+W=64 lr=0.001 epoch=44 loss=2.302526
+W=64 lr=0.001 epoch=45 loss=2.302525
+W=64 lr=0.001 epoch=46 loss=2.302524
+W=64 lr=0.001 epoch=47 loss=2.302523
+W=64 lr=0.001 epoch=48 loss=2.302521
+W=64 lr=0.001 epoch=49 loss=2.302520
+W=64 lr=0.001 epoch=50 loss=2.302519
+W=64 lr=0.01 epoch=01 loss=2.302587
+W=64 lr=0.01 epoch=02 loss=2.302574
+W=64 lr=0.01 epoch=03 loss=2.302559
+W=64 lr=0.01 epoch=04 loss=2.302542
+W=64 lr=0.01 epoch=05 loss=2.302528
+W=64 lr=0.01 epoch=06 loss=2.302516
+W=64 lr=0.01 epoch=07 loss=2.302500
+W=64 lr=0.01 epoch=08 loss=2.302488
+W=64 lr=0.01 epoch=09 loss=2.302485
+W=64 lr=0.01 epoch=10 loss=2.302478
+W=64 lr=0.01 epoch=11 loss=2.302473
+W=64 lr=0.01 epoch=12 loss=2.302463
+W=64 lr=0.01 epoch=13 loss=2.302456
+W=64 lr=0.01 epoch=14 loss=2.302452
+W=64 lr=0.01 epoch=15 loss=2.302445
+W=64 lr=0.01 epoch=16 loss=2.302438
+W=64 lr=0.01 epoch=17 loss=2.302436
+W=64 lr=0.01 epoch=18 loss=2.302430
+W=64 lr=0.01 epoch=19 loss=2.302420
+W=64 lr=0.01 epoch=20 loss=2.302416
+W=64 lr=0.01 epoch=21 loss=2.302412
+W=64 lr=0.01 epoch=22 loss=2.302406
+W=64 lr=0.01 epoch=23 loss=2.302403
+W=64 lr=0.01 epoch=24 loss=2.302398
+W=64 lr=0.01 epoch=25 loss=2.302391
+W=64 lr=0.01 epoch=26 loss=2.302386
+W=64 lr=0.01 epoch=27 loss=2.302381
+W=64 lr=0.01 epoch=28 loss=2.302377
+W=64 lr=0.01 epoch=29 loss=2.302371
+W=64 lr=0.01 epoch=30 loss=2.302368
+W=64 lr=0.01 epoch=31 loss=2.302363
+W=64 lr=0.01 epoch=32 loss=2.302357
+W=64 lr=0.01 epoch=33 loss=2.302353
+W=64 lr=0.01 epoch=34 loss=2.302349
+W=64 lr=0.01 epoch=35 loss=2.302343
+W=64 lr=0.01 epoch=36 loss=2.302337
+W=64 lr=0.01 epoch=37 loss=2.302332
+W=64 lr=0.01 epoch=38 loss=2.302327
+W=64 lr=0.01 epoch=39 loss=2.302322
+W=64 lr=0.01 epoch=40 loss=2.302316
+W=64 lr=0.01 epoch=41 loss=2.302310
+W=64 lr=0.01 epoch=42 loss=2.302305
+W=64 lr=0.01 epoch=43 loss=2.302300
+W=64 lr=0.01 epoch=44 loss=2.302295
+W=64 lr=0.01 epoch=45 loss=2.302289
+W=64 lr=0.01 epoch=46 loss=2.302284
+W=64 lr=0.01 epoch=47 loss=2.302278
+W=64 lr=0.01 epoch=48 loss=2.302271
+W=64 lr=0.01 epoch=49 loss=2.302266
+W=64 lr=0.01 epoch=50 loss=2.302261
+W=64 lr=0.1 epoch=01 loss=2.302569
+W=64 lr=0.1 epoch=02 loss=2.302500
+W=64 lr=0.1 epoch=03 loss=2.302436
+W=64 lr=0.1 epoch=04 loss=2.302376
+W=64 lr=0.1 epoch=05 loss=2.302308
+W=64 lr=0.1 epoch=06 loss=2.302233
+W=64 lr=0.1 epoch=07 loss=2.302159
+W=64 lr=0.1 epoch=08 loss=2.302078
+W=64 lr=0.1 epoch=09 loss=2.301973
+W=64 lr=0.1 epoch=10 loss=2.301809
+W=64 lr=0.1 epoch=11 loss=2.301529
+W=64 lr=0.1 epoch=12 loss=2.301140
+W=64 lr=0.1 epoch=13 loss=2.300575
+W=64 lr=0.1 epoch=14 loss=2.299649
+W=64 lr=0.1 epoch=15 loss=2.297930
+W=64 lr=0.1 epoch=16 loss=2.294645
+W=64 lr=0.1 epoch=17 loss=2.286998
+W=64 lr=0.1 epoch=18 loss=2.264730
+W=64 lr=0.1 epoch=19 loss=2.180245
+W=64 lr=0.1 epoch=20 loss=1.947833
+W=64 lr=0.1 epoch=21 loss=1.663146
+W=64 lr=0.1 epoch=22 loss=1.373616
+W=64 lr=0.1 epoch=23 loss=1.224342
+W=64 lr=0.1 epoch=24 loss=1.057641
+W=64 lr=0.1 epoch=25 loss=0.992584
+W=64 lr=0.1 epoch=26 loss=1.296992
+W=64 lr=0.1 epoch=27 loss=0.939888
+W=64 lr=0.1 epoch=28 loss=0.995021
+W=64 lr=0.1 epoch=29 loss=1.140643
+W=64 lr=0.1 epoch=30 loss=0.880606
+W=64 lr=0.1 epoch=31 loss=0.965388
+W=64 lr=0.1 epoch=32 loss=0.753152
+W=64 lr=0.1 epoch=33 loss=0.625758
+W=64 lr=0.1 epoch=34 loss=0.453287
+W=64 lr=0.1 epoch=35 loss=0.593511
+W=64 lr=0.1 epoch=36 loss=0.453796
+W=64 lr=0.1 epoch=37 loss=0.319303
+W=64 lr=0.1 epoch=38 loss=0.290335
+W=64 lr=0.1 epoch=39 loss=0.447568
+W=64 lr=0.1 epoch=40 loss=0.263204
+W=64 lr=0.1 epoch=41 loss=0.210228
+W=64 lr=0.1 epoch=42 loss=0.220897
+W=64 lr=0.1 epoch=43 loss=0.263887
+W=64 lr=0.1 epoch=44 loss=0.274279
+W=64 lr=0.1 epoch=45 loss=0.148138
+W=64 lr=0.1 epoch=46 loss=0.175487
+W=64 lr=0.1 epoch=47 loss=0.139232
+W=64 lr=0.1 epoch=48 loss=0.342125
+W=64 lr=0.1 epoch=49 loss=0.127742
+W=64 lr=0.1 epoch=50 loss=0.426592
+Width 16, lr=0.001: test accuracy 10.19%
+Width 16, lr=0.01: test accuracy 10.19%
+Width 16, lr=0.1: test accuracy 47.22%
+Width 64, lr=0.001: test accuracy 10.19%
+Width 64, lr=0.01: test accuracy 10.19%
+Width 64, lr=0.1: test accuracy 86.11%
+
+TASK 7
+W=16 lr=0.001: forward=74.85 us, backward=80.45 us
+W=16 lr=0.01: forward=74.20 us, backward=80.40 us
+W=16 lr=0.1: forward=74.50 us, backward=79.85 us
+W=64 lr=0.001: forward=140.85 us, backward=205.30 us
+W=64 lr=0.01: forward=166.20 us, backward=228.25 us
+W=64 lr=0.1: forward=166.70 us, backward=228.10 us
+
+CODE COMPLETE. Results folder: C:\Users\rojob\Documents\ChatGPT\Machine Learning\lab02\results
+Interface data refreshed: C:\Users\rojob\Documents\ChatGPT\Machine Learning\lab02\ui\index.html

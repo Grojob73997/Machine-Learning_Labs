@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Digits — Lab 2 Neural Network</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="network.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#task-2"><span class="brand-icon">⠿</span><span>digits<span class="brand-caption">NEURAL NETWORK LAB</span></span></a>
+    <div class="side-label">LAB 02 / EXPLORER</div>
+    <nav aria-label="Laboratory tasks" id="navigation"></nav>
+    <div class="side-note"><span class="small-dot"></span> From scratch with NumPy<p>64 inputs. Two hidden layers.<br>Ten handwritten digits.</p></div>
+    <div class="student"><span class="avatar">RF</span><div>G M Robi Farhan Rojob<small>73997 · Group 01</small></div></div>
+  </aside>
+  <main>
+    <header class="topbar"><span>Machine Learning <b>/</b> CII5SE039CI</span><button class="text-button" id="help-button">How to run ↗</button></header>
+    <div class="page">
+      <div class="page-heading"><div><div class="eyebrow" id="eyebrow"></div><h1 id="page-title"></h1><p class="subtitle" id="page-description"></p></div><span class="verified" id="check-badge">Measured experiment</span></div>
+      <section class="model-controls" aria-label="Experiment selection"><div class="control-heading"><span class="control-dot"></span> Experiment configuration</div><label>Hidden width<select id="width"><option value="16">16 neurons</option><option value="64" selected>64 neurons</option></select></label><label>Learning rate<select id="rate"><option value="0.001">0.001</option><option value="0.01">0.01</option><option value="0.1" selected>0.1</option></select></label><div class="fixed-settings"><span>SEED <b>42</b></span><span>BATCH <b>32</b></span><span>EPOCHS <b>50</b></span></div></section>
+      <div id="content" aria-live="polite"></div>
+      <footer><span>Python computes the experiments · HTML, CSS & JavaScript display them</span><span id="updated"></span></footer>
+    </div>
+  </main>
+  <dialog id="help-dialog"><form method="dialog"><button class="close" aria-label="Close instructions">×</button></form><div class="eyebrow">LOCAL PROJECT</div><h2>Run your lab in PyCharm</h2><ol><li>Open <code>open_ui.py</code> and click Run to open this interface.</li><li>Open any file from <code>src/task-1.py</code> through <code>src/task-7.py</code>. A later task runs its prerequisites automatically.</li><li>After changing the model code, run <code>src/build_ui.py</code>, then refresh this page to update all results.</li></ol><p>This interface works offline. Its predictions use the real exported model weights. Changing the selectors switches between the six completed experiments; it does not retrain a model.</p><p>The timing values measure Python forward and backward passes on this computer, not browser rendering.</p><a class="button secondary" href="../README_UI.md">Project instructions ↗</a></dialog>
+  <noscript>This interface requires JavaScript. The source code and CSV results are available in the src and results folders.</noscript>
+</body>
+</html>

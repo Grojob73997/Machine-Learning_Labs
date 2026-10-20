@@ -1,0 +1,396 @@
+LAB 2 - A NEURAL NETWORK FROM SCRATCH
+G M Robi Farhan Rojob | 73997 | Group 01
+Running gradient checks, six training experiments, and timing measurements.
+
+Python: 3.11.8
+Platform: Windows-10-10.0.26200-SP0
+Required Python: 3.11.8
+Python match: True
+
+COURSE REQUIREMENTS
+numpy: expected 1.26.4; installed 1.26.4; MATCH
+pandas: expected 2.2.2; installed not installed (not used in Lab 2); ABSENT
+scikit-learn: expected 1.5.0; installed 1.5.0; MATCH
+scipy: expected 1.13.1; installed 1.13.1; MATCH
+matplotlib: expected 3.9.0; installed 3.9.0; MATCH
+seaborn: expected 0.13.2; installed not installed (not used in Lab 2); ABSENT
+torch: expected 2.3.1; installed 2.3.1; MATCH
+torchvision: expected 0.18.1; installed not installed (not used in Lab 2); ABSENT
+torchinfo: expected 1.8.0; installed not installed (not used in Lab 2); ABSENT
+thop: expected 0.1.1.post2209072238; installed not installed (not used in Lab 2); ABSENT
+onnx: expected 1.16.1; installed not installed (not used in Lab 2); ABSENT
+onnxruntime: expected 1.18.0; installed not installed (not used in Lab 2); ABSENT
+mlflow: expected 2.14.1; installed not installed (not used in Lab 2); ABSENT
+memory-profiler: expected 0.61.0; installed not installed (not used in Lab 2); ABSENT
+psutil: expected 5.9.8; installed not installed (not used in Lab 2); ABSENT
+codecarbon: expected 2.4.2; installed not installed (not used in Lab 2); ABSENT
+fastapi: expected 0.111.0; installed not installed (not used in Lab 2); ABSENT
+uvicorn: expected 0.30.1; installed not installed (not used in Lab 2); ABSENT
+pytest: expected 8.2.2; installed not installed (not used in Lab 2); ABSENT
+httpx: expected 0.27.0; installed not installed (not used in Lab 2); ABSENT
+locust: expected 2.28.0; installed not installed (not used in Lab 2); ABSENT
+requests: expected 2.32.3; installed not installed (not used in Lab 2); ABSENT
+pyarrow: expected 16.1.0; installed not installed (not used in Lab 2); ABSENT
+joblib: expected 1.4.2; installed 1.4.2; MATCH
+tqdm: expected 4.66.4; installed not installed (not used in Lab 2); ABSENT
+
+ALL INSTALLED DISTRIBUTIONS
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+contourpy==1.3.3
+cycler==0.12.1
+filelock==4.1.1
+fonttools==4.66.1
+fsspec==2026.9.0
+intel-openmp==2021.4.0
+joblib==1.4.2
+kiwisolver==1.5.1
+matplotlib==3.9.0
+mkl==2021.4.0
+mpmath==1.3.0
+networkx==3.6.1
+numpy==1.26.4
+packaging==26.3
+pillow==12.3.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+scikit-learn==1.5.0
+scipy==1.13.1
+six==1.17.0
+sympy==1.14.0
+tbb==2021.13.1
+threadpoolctl==3.7.0
+torch==2.3.1
+typing_extensions==4.16.0
+
+Gradient check before training, width 16: 10/10
+W=16 lr=0.001 epoch=01 loss=2.302583 accuracy=0.1225
+W=16 lr=0.001 epoch=02 loss=2.302583 accuracy=0.0994
+W=16 lr=0.001 epoch=03 loss=2.302582 accuracy=0.1010
+W=16 lr=0.001 epoch=04 loss=2.302581 accuracy=0.1018
+W=16 lr=0.001 epoch=05 loss=2.302580 accuracy=0.1010
+W=16 lr=0.001 epoch=06 loss=2.302580 accuracy=0.1010
+W=16 lr=0.001 epoch=07 loss=2.302578 accuracy=0.1010
+W=16 lr=0.001 epoch=08 loss=2.302577 accuracy=0.1010
+W=16 lr=0.001 epoch=09 loss=2.302577 accuracy=0.1010
+W=16 lr=0.001 epoch=10 loss=2.302576 accuracy=0.1010
+W=16 lr=0.001 epoch=11 loss=2.302575 accuracy=0.1010
+W=16 lr=0.001 epoch=12 loss=2.302574 accuracy=0.1010
+W=16 lr=0.001 epoch=13 loss=2.302573 accuracy=0.1010
+W=16 lr=0.001 epoch=14 loss=2.302573 accuracy=0.1010
+W=16 lr=0.001 epoch=15 loss=2.302572 accuracy=0.1289
+W=16 lr=0.001 epoch=16 loss=2.302571 accuracy=0.1018
+W=16 lr=0.001 epoch=17 loss=2.302571 accuracy=0.1018
+W=16 lr=0.001 epoch=18 loss=2.302570 accuracy=0.1018
+W=16 lr=0.001 epoch=19 loss=2.302569 accuracy=0.1018
+W=16 lr=0.001 epoch=20 loss=2.302569 accuracy=0.1018
+W=16 lr=0.001 epoch=21 loss=2.302568 accuracy=0.1018
+W=16 lr=0.001 epoch=22 loss=2.302567 accuracy=0.1018
+W=16 lr=0.001 epoch=23 loss=2.302567 accuracy=0.1018
+W=16 lr=0.001 epoch=24 loss=2.302566 accuracy=0.1018
+W=16 lr=0.001 epoch=25 loss=2.302565 accuracy=0.1018
+W=16 lr=0.001 epoch=26 loss=2.302564 accuracy=0.1018
+W=16 lr=0.001 epoch=27 loss=2.302564 accuracy=0.1018
+W=16 lr=0.001 epoch=28 loss=2.302563 accuracy=0.1018
+W=16 lr=0.001 epoch=29 loss=2.302562 accuracy=0.1018
+W=16 lr=0.001 epoch=30 loss=2.302562 accuracy=0.1018
+W=16 lr=0.001 epoch=31 loss=2.302561 accuracy=0.1018
+W=16 lr=0.001 epoch=32 loss=2.302560 accuracy=0.1018
+W=16 lr=0.001 epoch=33 loss=2.302560 accuracy=0.1018
+W=16 lr=0.001 epoch=34 loss=2.302559 accuracy=0.1018
+W=16 lr=0.001 epoch=35 loss=2.302558 accuracy=0.1018
+W=16 lr=0.001 epoch=36 loss=2.302558 accuracy=0.1018
+W=16 lr=0.001 epoch=37 loss=2.302557 accuracy=0.1018
+W=16 lr=0.001 epoch=38 loss=2.302557 accuracy=0.1018
+W=16 lr=0.001 epoch=39 loss=2.302556 accuracy=0.1018
+W=16 lr=0.001 epoch=40 loss=2.302555 accuracy=0.1018
+W=16 lr=0.001 epoch=41 loss=2.302554 accuracy=0.1018
+W=16 lr=0.001 epoch=42 loss=2.302554 accuracy=0.1018
+W=16 lr=0.001 epoch=43 loss=2.302553 accuracy=0.1018
+W=16 lr=0.001 epoch=44 loss=2.302553 accuracy=0.1018
+W=16 lr=0.001 epoch=45 loss=2.302552 accuracy=0.1018
+W=16 lr=0.001 epoch=46 loss=2.302551 accuracy=0.1018
+W=16 lr=0.001 epoch=47 loss=2.302551 accuracy=0.1018
+W=16 lr=0.001 epoch=48 loss=2.302550 accuracy=0.1018
+W=16 lr=0.001 epoch=49 loss=2.302550 accuracy=0.1018
+W=16 lr=0.001 epoch=50 loss=2.302549 accuracy=0.1018
+W=16 lr=0.01 epoch=01 loss=2.302582 accuracy=0.1018
+W=16 lr=0.01 epoch=02 loss=2.302578 accuracy=0.0994
+W=16 lr=0.01 epoch=03 loss=2.302572 accuracy=0.1010
+W=16 lr=0.01 epoch=04 loss=2.302566 accuracy=0.1018
+W=16 lr=0.01 epoch=05 loss=2.302558 accuracy=0.1010
+W=16 lr=0.01 epoch=06 loss=2.302552 accuracy=0.1010
+W=16 lr=0.01 epoch=07 loss=2.302541 accuracy=0.1010
+W=16 lr=0.01 epoch=08 loss=2.302533 accuracy=0.1010
+W=16 lr=0.01 epoch=09 loss=2.302533 accuracy=0.1010
+W=16 lr=0.01 epoch=10 loss=2.302530 accuracy=0.1010
+W=16 lr=0.01 epoch=11 loss=2.302528 accuracy=0.1010
+W=16 lr=0.01 epoch=12 loss=2.302521 accuracy=0.1010
+W=16 lr=0.01 epoch=13 loss=2.302518 accuracy=0.1010
+W=16 lr=0.01 epoch=14 loss=2.302517 accuracy=0.1010
+W=16 lr=0.01 epoch=15 loss=2.302513 accuracy=0.1018
+W=16 lr=0.01 epoch=16 loss=2.302509 accuracy=0.1018
+W=16 lr=0.01 epoch=17 loss=2.302511 accuracy=0.1018
+W=16 lr=0.01 epoch=18 loss=2.302508 accuracy=0.1018
+W=16 lr=0.01 epoch=19 loss=2.302502 accuracy=0.1018
+W=16 lr=0.01 epoch=20 loss=2.302501 accuracy=0.1018
+W=16 lr=0.01 epoch=21 loss=2.302500 accuracy=0.1018
+W=16 lr=0.01 epoch=22 loss=2.302498 accuracy=0.1018
+W=16 lr=0.01 epoch=23 loss=2.302498 accuracy=0.1018
+W=16 lr=0.01 epoch=24 loss=2.302496 accuracy=0.1018
+W=16 lr=0.01 epoch=25 loss=2.302493 accuracy=0.1018
+W=16 lr=0.01 epoch=26 loss=2.302491 accuracy=0.1018
+W=16 lr=0.01 epoch=27 loss=2.302490 accuracy=0.1018
+W=16 lr=0.01 epoch=28 loss=2.302489 accuracy=0.1018
+W=16 lr=0.01 epoch=29 loss=2.302487 accuracy=0.1018
+W=16 lr=0.01 epoch=30 loss=2.302488 accuracy=0.1018
+W=16 lr=0.01 epoch=31 loss=2.302486 accuracy=0.1018
+W=16 lr=0.01 epoch=32 loss=2.302485 accuracy=0.1018
+W=16 lr=0.01 epoch=33 loss=2.302485 accuracy=0.1018
+W=16 lr=0.01 epoch=34 loss=2.302485 accuracy=0.1018
+W=16 lr=0.01 epoch=35 loss=2.302483 accuracy=0.1018
+W=16 lr=0.01 epoch=36 loss=2.302482 accuracy=0.1018
+W=16 lr=0.01 epoch=37 loss=2.302482 accuracy=0.1018
+W=16 lr=0.01 epoch=38 loss=2.302481 accuracy=0.1018
+W=16 lr=0.01 epoch=39 loss=2.302481 accuracy=0.1018
+W=16 lr=0.01 epoch=40 loss=2.302479 accuracy=0.1018
+W=16 lr=0.01 epoch=41 loss=2.302479 accuracy=0.1018
+W=16 lr=0.01 epoch=42 loss=2.302478 accuracy=0.1018
+W=16 lr=0.01 epoch=43 loss=2.302477 accuracy=0.1018
+W=16 lr=0.01 epoch=44 loss=2.302477 accuracy=0.1018
+W=16 lr=0.01 epoch=45 loss=2.302477 accuracy=0.1018
+W=16 lr=0.01 epoch=46 loss=2.302476 accuracy=0.1018
+W=16 lr=0.01 epoch=47 loss=2.302476 accuracy=0.1018
+W=16 lr=0.01 epoch=48 loss=2.302474 accuracy=0.1018
+W=16 lr=0.01 epoch=49 loss=2.302475 accuracy=0.1018
+W=16 lr=0.01 epoch=50 loss=2.302475 accuracy=0.1018
+W=16 lr=0.1 epoch=01 loss=2.302620 accuracy=0.0986
+W=16 lr=0.1 epoch=02 loss=2.302586 accuracy=0.0994
+W=16 lr=0.1 epoch=03 loss=2.302556 accuracy=0.1010
+W=16 lr=0.1 epoch=04 loss=2.302538 accuracy=0.1018
+W=16 lr=0.1 epoch=05 loss=2.302519 accuracy=0.1010
+W=16 lr=0.1 epoch=06 loss=2.302502 accuracy=0.1010
+W=16 lr=0.1 epoch=07 loss=2.302501 accuracy=0.1018
+W=16 lr=0.1 epoch=08 loss=2.302517 accuracy=0.1010
+W=16 lr=0.1 epoch=09 loss=2.302536 accuracy=0.0986
+W=16 lr=0.1 epoch=10 loss=2.302547 accuracy=0.1010
+W=16 lr=0.1 epoch=11 loss=2.302520 accuracy=0.1010
+W=16 lr=0.1 epoch=12 loss=2.302491 accuracy=0.1018
+W=16 lr=0.1 epoch=13 loss=2.302497 accuracy=0.1010
+W=16 lr=0.1 epoch=14 loss=2.302506 accuracy=0.1002
+W=16 lr=0.1 epoch=15 loss=2.302480 accuracy=0.1010
+W=16 lr=0.1 epoch=16 loss=2.302515 accuracy=0.1010
+W=16 lr=0.1 epoch=17 loss=2.302528 accuracy=0.1010
+W=16 lr=0.1 epoch=18 loss=2.302504 accuracy=0.1018
+W=16 lr=0.1 epoch=19 loss=2.302447 accuracy=0.1018
+W=16 lr=0.1 epoch=20 loss=2.302443 accuracy=0.1010
+W=16 lr=0.1 epoch=21 loss=2.302420 accuracy=0.1018
+W=16 lr=0.1 epoch=22 loss=2.302385 accuracy=0.1018
+W=16 lr=0.1 epoch=23 loss=2.302345 accuracy=0.1018
+W=16 lr=0.1 epoch=24 loss=2.302330 accuracy=0.1010
+W=16 lr=0.1 epoch=25 loss=2.302293 accuracy=0.1018
+W=16 lr=0.1 epoch=26 loss=2.302246 accuracy=0.1257
+W=16 lr=0.1 epoch=27 loss=2.302200 accuracy=0.1002
+W=16 lr=0.1 epoch=28 loss=2.302108 accuracy=0.1018
+W=16 lr=0.1 epoch=29 loss=2.301994 accuracy=0.1018
+W=16 lr=0.1 epoch=30 loss=2.301812 accuracy=0.1018
+W=16 lr=0.1 epoch=31 loss=2.301567 accuracy=0.1010
+W=16 lr=0.1 epoch=32 loss=2.301208 accuracy=0.1010
+W=16 lr=0.1 epoch=33 loss=2.300599 accuracy=0.1010
+W=16 lr=0.1 epoch=34 loss=2.299513 accuracy=0.1782
+W=16 lr=0.1 epoch=35 loss=2.297436 accuracy=0.1010
+W=16 lr=0.1 epoch=36 loss=2.292736 accuracy=0.2721
+W=16 lr=0.1 epoch=37 loss=2.280440 accuracy=0.2347
+W=16 lr=0.1 epoch=38 loss=2.239264 accuracy=0.2601
+W=16 lr=0.1 epoch=39 loss=2.130525 accuracy=0.2570
+W=16 lr=0.1 epoch=40 loss=1.964779 accuracy=0.2554
+W=16 lr=0.1 epoch=41 loss=1.734815 accuracy=0.3007
+W=16 lr=0.1 epoch=42 loss=1.565601 accuracy=0.3930
+W=16 lr=0.1 epoch=43 loss=1.469692 accuracy=0.3986
+W=16 lr=0.1 epoch=44 loss=1.276818 accuracy=0.4909
+W=16 lr=0.1 epoch=45 loss=1.084170 accuracy=0.5943
+W=16 lr=0.1 epoch=46 loss=1.028863 accuracy=0.5998
+W=16 lr=0.1 epoch=47 loss=0.903652 accuracy=0.6635
+W=16 lr=0.1 epoch=48 loss=1.161240 accuracy=0.5394
+W=16 lr=0.1 epoch=49 loss=0.821416 accuracy=0.6969
+W=16 lr=0.1 epoch=50 loss=1.432382 accuracy=0.4861
+Gradient check before training, width 64: 10/10
+W=64 lr=0.001 epoch=01 loss=2.302594 accuracy=0.1360
+W=64 lr=0.001 epoch=02 loss=2.302593 accuracy=0.1392
+W=64 lr=0.001 epoch=03 loss=2.302592 accuracy=0.1464
+W=64 lr=0.001 epoch=04 loss=2.302590 accuracy=0.1114
+W=64 lr=0.001 epoch=05 loss=2.302589 accuracy=0.1154
+W=64 lr=0.001 epoch=06 loss=2.302587 accuracy=0.1090
+W=64 lr=0.001 epoch=07 loss=2.302585 accuracy=0.1257
+W=64 lr=0.001 epoch=08 loss=2.302583 accuracy=0.1138
+W=64 lr=0.001 epoch=09 loss=2.302582 accuracy=0.1130
+W=64 lr=0.001 epoch=10 loss=2.302581 accuracy=0.1313
+W=64 lr=0.001 epoch=11 loss=2.302579 accuracy=0.1010
+W=64 lr=0.001 epoch=12 loss=2.302578 accuracy=0.1010
+W=64 lr=0.001 epoch=13 loss=2.302576 accuracy=0.0811
+W=64 lr=0.001 epoch=14 loss=2.302575 accuracy=0.0979
+W=64 lr=0.001 epoch=15 loss=2.302573 accuracy=0.0597
+W=64 lr=0.001 epoch=16 loss=2.302571 accuracy=0.0453
+W=64 lr=0.001 epoch=17 loss=2.302570 accuracy=0.0342
+W=64 lr=0.001 epoch=18 loss=2.302569 accuracy=0.0915
+W=64 lr=0.001 epoch=19 loss=2.302567 accuracy=0.1066
+W=64 lr=0.001 epoch=20 loss=2.302565 accuracy=0.0859
+W=64 lr=0.001 epoch=21 loss=2.302564 accuracy=0.1026
+W=64 lr=0.001 epoch=22 loss=2.302562 accuracy=0.1018
+W=64 lr=0.001 epoch=23 loss=2.302561 accuracy=0.1018
+W=64 lr=0.001 epoch=24 loss=2.302559 accuracy=0.1018
+W=64 lr=0.001 epoch=25 loss=2.302557 accuracy=0.1018
+W=64 lr=0.001 epoch=26 loss=2.302555 accuracy=0.1018
+W=64 lr=0.001 epoch=27 loss=2.302553 accuracy=0.1018
+W=64 lr=0.001 epoch=28 loss=2.302551 accuracy=0.1018
+W=64 lr=0.001 epoch=29 loss=2.302549 accuracy=0.1018
+W=64 lr=0.001 epoch=30 loss=2.302548 accuracy=0.1018
+W=64 lr=0.001 epoch=31 loss=2.302547 accuracy=0.1018
+W=64 lr=0.001 epoch=32 loss=2.302545 accuracy=0.1018
+W=64 lr=0.001 epoch=33 loss=2.302544 accuracy=0.1018
+W=64 lr=0.001 epoch=34 loss=2.302542 accuracy=0.1018
+W=64 lr=0.001 epoch=35 loss=2.302540 accuracy=0.1018
+W=64 lr=0.001 epoch=36 loss=2.302538 accuracy=0.1018
+W=64 lr=0.001 epoch=37 loss=2.302537 accuracy=0.1018
+W=64 lr=0.001 epoch=38 loss=2.302535 accuracy=0.1018
+W=64 lr=0.001 epoch=39 loss=2.302534 accuracy=0.1018
+W=64 lr=0.001 epoch=40 loss=2.302532 accuracy=0.1018
+W=64 lr=0.001 epoch=41 loss=2.302531 accuracy=0.1018
+W=64 lr=0.001 epoch=42 loss=2.302529 accuracy=0.1018
+W=64 lr=0.001 epoch=43 loss=2.302528 accuracy=0.1018
+W=64 lr=0.001 epoch=44 loss=2.302526 accuracy=0.1018
+W=64 lr=0.001 epoch=45 loss=2.302525 accuracy=0.1018
+W=64 lr=0.001 epoch=46 loss=2.302524 accuracy=0.1018
+W=64 lr=0.001 epoch=47 loss=2.302523 accuracy=0.1018
+W=64 lr=0.001 epoch=48 loss=2.302521 accuracy=0.1018
+W=64 lr=0.001 epoch=49 loss=2.302520 accuracy=0.1018
+W=64 lr=0.001 epoch=50 loss=2.302519 accuracy=0.1018
+W=64 lr=0.01 epoch=01 loss=2.302587 accuracy=0.0851
+W=64 lr=0.01 epoch=02 loss=2.302574 accuracy=0.0994
+W=64 lr=0.01 epoch=03 loss=2.302559 accuracy=0.1098
+W=64 lr=0.01 epoch=04 loss=2.302542 accuracy=0.1018
+W=64 lr=0.01 epoch=05 loss=2.302528 accuracy=0.1010
+W=64 lr=0.01 epoch=06 loss=2.302516 accuracy=0.1010
+W=64 lr=0.01 epoch=07 loss=2.302500 accuracy=0.1010
+W=64 lr=0.01 epoch=08 loss=2.302488 accuracy=0.1010
+W=64 lr=0.01 epoch=09 loss=2.302485 accuracy=0.1010
+W=64 lr=0.01 epoch=10 loss=2.302478 accuracy=0.1010
+W=64 lr=0.01 epoch=11 loss=2.302473 accuracy=0.1010
+W=64 lr=0.01 epoch=12 loss=2.302463 accuracy=0.1010
+W=64 lr=0.01 epoch=13 loss=2.302456 accuracy=0.1010
+W=64 lr=0.01 epoch=14 loss=2.302452 accuracy=0.1010
+W=64 lr=0.01 epoch=15 loss=2.302445 accuracy=0.1026
+W=64 lr=0.01 epoch=16 loss=2.302438 accuracy=0.1018
+W=64 lr=0.01 epoch=17 loss=2.302436 accuracy=0.1018
+W=64 lr=0.01 epoch=18 loss=2.302430 accuracy=0.1018
+W=64 lr=0.01 epoch=19 loss=2.302420 accuracy=0.1018
+W=64 lr=0.01 epoch=20 loss=2.302416 accuracy=0.1018
+W=64 lr=0.01 epoch=21 loss=2.302412 accuracy=0.1018
+W=64 lr=0.01 epoch=22 loss=2.302406 accuracy=0.1018
+W=64 lr=0.01 epoch=23 loss=2.302403 accuracy=0.1018
+W=64 lr=0.01 epoch=24 loss=2.302398 accuracy=0.1018
+W=64 lr=0.01 epoch=25 loss=2.302391 accuracy=0.1018
+W=64 lr=0.01 epoch=26 loss=2.302386 accuracy=0.1018
+W=64 lr=0.01 epoch=27 loss=2.302381 accuracy=0.1018
+W=64 lr=0.01 epoch=28 loss=2.302377 accuracy=0.1018
+W=64 lr=0.01 epoch=29 loss=2.302371 accuracy=0.1018
+W=64 lr=0.01 epoch=30 loss=2.302368 accuracy=0.1018
+W=64 lr=0.01 epoch=31 loss=2.302363 accuracy=0.1018
+W=64 lr=0.01 epoch=32 loss=2.302357 accuracy=0.1018
+W=64 lr=0.01 epoch=33 loss=2.302353 accuracy=0.1018
+W=64 lr=0.01 epoch=34 loss=2.302349 accuracy=0.1018
+W=64 lr=0.01 epoch=35 loss=2.302343 accuracy=0.1018
+W=64 lr=0.01 epoch=36 loss=2.302337 accuracy=0.1018
+W=64 lr=0.01 epoch=37 loss=2.302332 accuracy=0.1018
+W=64 lr=0.01 epoch=38 loss=2.302327 accuracy=0.1018
+W=64 lr=0.01 epoch=39 loss=2.302322 accuracy=0.1018
+W=64 lr=0.01 epoch=40 loss=2.302316 accuracy=0.1018
+W=64 lr=0.01 epoch=41 loss=2.302310 accuracy=0.1018
+W=64 lr=0.01 epoch=42 loss=2.302305 accuracy=0.1018
+W=64 lr=0.01 epoch=43 loss=2.302300 accuracy=0.1018
+W=64 lr=0.01 epoch=44 loss=2.302295 accuracy=0.1018
+W=64 lr=0.01 epoch=45 loss=2.302289 accuracy=0.1018
+W=64 lr=0.01 epoch=46 loss=2.302284 accuracy=0.1018
+W=64 lr=0.01 epoch=47 loss=2.302278 accuracy=0.1018
+W=64 lr=0.01 epoch=48 loss=2.302271 accuracy=0.1018
+W=64 lr=0.01 epoch=49 loss=2.302266 accuracy=0.1018
+W=64 lr=0.01 epoch=50 loss=2.302261 accuracy=0.1018
+W=64 lr=0.1 epoch=01 loss=2.302569 accuracy=0.0986
+W=64 lr=0.1 epoch=02 loss=2.302500 accuracy=0.0994
+W=64 lr=0.1 epoch=03 loss=2.302436 accuracy=0.1010
+W=64 lr=0.1 epoch=04 loss=2.302376 accuracy=0.1018
+W=64 lr=0.1 epoch=05 loss=2.302308 accuracy=0.1010
+W=64 lr=0.1 epoch=06 loss=2.302233 accuracy=0.1010
+W=64 lr=0.1 epoch=07 loss=2.302159 accuracy=0.1018
+W=64 lr=0.1 epoch=08 loss=2.302078 accuracy=0.1010
+W=64 lr=0.1 epoch=09 loss=2.301973 accuracy=0.0986
+W=64 lr=0.1 epoch=10 loss=2.301809 accuracy=0.1010
+W=64 lr=0.1 epoch=11 loss=2.301529 accuracy=0.1010
+W=64 lr=0.1 epoch=12 loss=2.301140 accuracy=0.1018
+W=64 lr=0.1 epoch=13 loss=2.300575 accuracy=0.1010
+W=64 lr=0.1 epoch=14 loss=2.299649 accuracy=0.1273
+W=64 lr=0.1 epoch=15 loss=2.297930 accuracy=0.1233
+W=64 lr=0.1 epoch=16 loss=2.294645 accuracy=0.2753
+W=64 lr=0.1 epoch=17 loss=2.286998 accuracy=0.3516
+W=64 lr=0.1 epoch=18 loss=2.264730 accuracy=0.2880
+W=64 lr=0.1 epoch=19 loss=2.180245 accuracy=0.2076
+W=64 lr=0.1 epoch=20 loss=1.947833 accuracy=0.2554
+W=64 lr=0.1 epoch=21 loss=1.663146 accuracy=0.3413
+W=64 lr=0.1 epoch=22 loss=1.373616 accuracy=0.4781
+W=64 lr=0.1 epoch=23 loss=1.224342 accuracy=0.5115
+W=64 lr=0.1 epoch=24 loss=1.057641 accuracy=0.5609
+W=64 lr=0.1 epoch=25 loss=0.992584 accuracy=0.6006
+W=64 lr=0.1 epoch=26 loss=1.296992 accuracy=0.5338
+W=64 lr=0.1 epoch=27 loss=0.939888 accuracy=0.6436
+W=64 lr=0.1 epoch=28 loss=0.995021 accuracy=0.6022
+W=64 lr=0.1 epoch=29 loss=1.140643 accuracy=0.5465
+W=64 lr=0.1 epoch=30 loss=0.880606 accuracy=0.6698
+W=64 lr=0.1 epoch=31 loss=0.965388 accuracy=0.6388
+W=64 lr=0.1 epoch=32 loss=0.753152 accuracy=0.7033
+W=64 lr=0.1 epoch=33 loss=0.625758 accuracy=0.7566
+W=64 lr=0.1 epoch=34 loss=0.453287 accuracy=0.8305
+W=64 lr=0.1 epoch=35 loss=0.593511 accuracy=0.7757
+W=64 lr=0.1 epoch=36 loss=0.453796 accuracy=0.8361
+W=64 lr=0.1 epoch=37 loss=0.319303 accuracy=0.9053
+W=64 lr=0.1 epoch=38 loss=0.290335 accuracy=0.9117
+W=64 lr=0.1 epoch=39 loss=0.447568 accuracy=0.8544
+W=64 lr=0.1 epoch=40 loss=0.263204 accuracy=0.9173
+W=64 lr=0.1 epoch=41 loss=0.210228 accuracy=0.9427
+W=64 lr=0.1 epoch=42 loss=0.220897 accuracy=0.9348
+W=64 lr=0.1 epoch=43 loss=0.263887 accuracy=0.9117
+W=64 lr=0.1 epoch=44 loss=0.274279 accuracy=0.8974
+W=64 lr=0.1 epoch=45 loss=0.148138 accuracy=0.9618
+W=64 lr=0.1 epoch=46 loss=0.175487 accuracy=0.9435
+W=64 lr=0.1 epoch=47 loss=0.139232 accuracy=0.9610
+W=64 lr=0.1 epoch=48 loss=0.342125 accuracy=0.8743
+W=64 lr=0.1 epoch=49 loss=0.127742 accuracy=0.9626
+W=64 lr=0.1 epoch=50 loss=0.426592 accuracy=0.8624
+All six experiments finished. Evidence saved to C:\Users\rojob\Documents\ChatGPT\Machine Learning\lab02\results
+
+Checking numerical stability and all six parameter-gradient arrays...
+test_all_six_gradient_arrays (test_network.NetworkTests.test_all_six_gradient_arrays) ... ok
+test_stable_loss_at_large_logits (test_network.NetworkTests.test_stable_loss_at_large_logits) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.007s
+
+OK
+
+FINAL TEST RESULTS
+Width  Learning rate  Test accuracy
+   16          0.001        10.19%
+   16           0.01        10.19%
+   16            0.1        47.22%
+   64          0.001        10.19%
+   64           0.01        10.19%
+   64            0.1        86.11%
+
+Gradient checks before training:
+  Width 16: 10/10 passed
+  Width 64: 10/10 passed
+
+COMPLETE
+Report: C:\Users\rojob\Documents\ChatGPT\Machine Learning\lab02\report.md
+Loss curves: C:\Users\rojob\Documents\ChatGPT\Machine Learning\lab02\results\loss_curves.png
+Timing: C:\Users\rojob\Documents\ChatGPT\Machine Learning\lab02\results\timing.csv
+All other measurements: C:\Users\rojob\Documents\ChatGPT\Machine Learning\lab02\results
