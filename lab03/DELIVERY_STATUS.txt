@@ -1,0 +1,26 @@
+LAB 3 DELIVERY
+
+The implementation, actual training results, profiling evidence, report and
+plots are complete. All three saved models reproduced their recorded test
+accuracies in verification.
+
+The authoritative working copy belongs in the existing E-drive course folder
+beside lab01 and lab02. The course directory originally had no .git metadata.
+The delivery script records the existing files in a current baseline commit
+and then records Lab 3 in a second current commit; it does not invent earlier
+development history. The actual commit hashes are written to GIT_DELIVERY.txt
+beside the submission ZIP and can be checked with git log in the course folder.
+
+Remaining student work:
+- Write the Question 3 calculations on paper and add scans in results/handwritten/.
+- Read the assigned textbook sections and review the explanation.
+- Rewrite the three conclusions in your own words.
+- Ask the teacher about the incompatible size target if clarification is available.
+- Commit the handwritten evidence and any personal revisions before submission.
+
+Known limitations explicitly documented:
+- All three exact architectures miss the manual's 100k-150k parameter target.
+- The full course package list has a pre-existing mlflow/pyarrow conflict.
+- Default THOP omits attention work; the report retains and explains its output.
+- The uploaded book's prior availability could not be confirmed. This run uses
+  the exact July 2025 PDF supplied in the current chat.

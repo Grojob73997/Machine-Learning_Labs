@@ -1,0 +1,48 @@
+LAB 3 - G M Robi Farhan Rojob - 73997
+
+Use the SAME course project containing lab01 and lab02.
+Open lab03/main.py and run that file.
+Do not run the old Lab 2 main.py to run Lab 3.
+
+Existing tested interpreter on this computer:
+C:\Users\rojob\Documents\ChatGPT\Machine Learning\.venv-lab2\Scripts\python.exe
+
+Its folder name mentions Lab 2, but the exact Lab 3 packages have now been
+added. It uses Python 3.11.8 and the teacher's required package versions.
+In PyCharm's interpreter selector, choose this existing interpreter.
+
+Expected behavior:
+1. Print Python and every installed library version.
+2. Count parameters with torchinfo and operations with THOP.
+3. Download Fashion-MNIST into the course root data/ folder if missing.
+4. Train MLP, CNN and attention for exactly five epochs each.
+5. Evaluate the official test set and time inference.
+6. Save results and refresh report.md plus four plots.
+7. Print COMPLETE.
+
+The supplied run is already complete. To inspect it without retraining,
+open report.md and results/. To validate saved models, run:
+python lab03/src/verify_lab.py --results
+
+To refresh the report from saved CSVs, run:
+python lab03/src/write_report.py
+
+To inspect only architecture/FLOP counts, run:
+python lab03/main.py --profile-only
+
+Running main.py overwrites the prior Lab 3 measurements and report.
+Timings can change. If you repeat the run, use its own results consistently
+and update any handwritten measured-latency table.
+
+For a different computer:
+Install Python 3.11.8; create a virtual environment and install
+lab03/requirements-lab03.txt. The full requirements.txt at course root is
+preserved, but it contains a known conflict between mlflow and pyarrow.
+Use the Lab 3 subset for this experiment; see report.md for the explanation.
+
+Your remaining paper work:
+Follow hand_calculations.md or lab3 explanation.pdf.
+Write the Question 3 working yourself on paper, photograph/scan the sheets,
+and put the scans in lab03/results/handwritten/.
+Review the three report conclusions and write them in words you understand.
+Record these later changes with a genuine commit before submitting.

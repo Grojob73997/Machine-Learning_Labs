@@ -1,0 +1,12 @@
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[91m[WARN] Cannot find rule for <class 'torch.nn.modules.linear.NonDynamicallyQuantizableLinear'>. Treat it as zero Macs and zero Params.
+[00m[91m[WARN] Cannot find rule for <class 'torch.nn.modules.activation.MultiheadAttention'>. Treat it as zero Macs and zero Params.
+[00m[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[91m[WARN] Cannot find rule for <class 'torch.nn.modules.transformer.TransformerEncoderLayer'>. Treat it as zero Macs and zero Params.
+[00m[91m[WARN] Cannot find rule for <class 'torch.nn.modules.container.ModuleList'>. Treat it as zero Macs and zero Params.
+[00m[91m[WARN] Cannot find rule for <class 'models.Attention'>. Treat it as zero Macs and zero Params.
+[00m[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Customize rule count_attention_macs() <class 'torch.nn.modules.activation.MultiheadAttention'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Customize rule count_zero() <class 'torch.nn.modules.normalization.LayerNorm'>.

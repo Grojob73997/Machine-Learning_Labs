@@ -1,0 +1,10 @@
+MLP parameter count, output shape, and finite backward: PASS
+CNN parameter count, output shape, and finite backward: PASS
+Attention parameter count, output shape, and finite backward: PASS
+All 16 patches match direct image slices: PASS
+No-position attention has expected patch permutation invariance: PASS
+DATA: 55,000 train / 5,000 validation / 10,000 official test
+MLP checkpoint reproduces reported test accuracy; epochs and latency medians: PASS
+CNN checkpoint reproduces reported test accuracy; epochs and latency medians: PASS
+Attention checkpoint reproduces reported test accuracy; epochs and latency medians: PASS
+All 15 epochs, 360 timings, and 3 complete test evaluations verified.

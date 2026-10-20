@@ -1,0 +1,21 @@
+model,component,flops,macs
+MLP,Linear 784->256,401408,200704
+MLP,Linear 256->128,65536,32768
+MLP,Linear 128->10,2560,1280
+CNN,"Conv 1->16, 28x28",225792,112896
+CNN,"Conv 16->32, 14x14",1806336,903168
+CNN,Linear 1568->10,31360,15680
+Attention,"Patch projection 49->64, 16 tokens",100352,50176
+Attention,Encoder 1: QKV projections,393216,196608
+Attention,Encoder 1: QK transpose,32768,16384
+Attention,Encoder 1: Attention times V,32768,16384
+Attention,Encoder 1: Output projection,131072,65536
+Attention,Encoder 1: Feedforward 64->128,262144,131072
+Attention,Encoder 1: Feedforward 128->64,262144,131072
+Attention,Encoder 2: QKV projections,393216,196608
+Attention,Encoder 2: QK transpose,32768,16384
+Attention,Encoder 2: Attention times V,32768,16384
+Attention,Encoder 2: Output projection,131072,65536
+Attention,Encoder 2: Feedforward 64->128,262144,131072
+Attention,Encoder 2: Feedforward 128->64,262144,131072
+Attention,Classifier 64->10,1280,640

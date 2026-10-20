@@ -1,0 +1,63 @@
+{
+  "primary_textbook": "E:\\introduction-to-machine-learning-systems_compress.pdf",
+  "edition": "31 July 2025",
+  "sha256": "364ed2c2f3c620cf4202eb8ec77f37bda21e10cff7e37f59815fef81af3e6c9a",
+  "pdf_pages": 2066,
+  "printed_to_viewer_page_offset": 52,
+  "sections": {
+    "4.2": {
+      "printed": [
+        153,
+        157
+      ],
+      "viewer": [
+        205,
+        209
+      ]
+    },
+    "4.3": {
+      "printed": [
+        158,
+        163
+      ],
+      "viewer": [
+        210,
+        215
+      ]
+    },
+    "4.5": {
+      "printed": [
+        169,
+        176
+      ],
+      "viewer": [
+        221,
+        228
+      ]
+    },
+    "4.6": {
+      "printed": [
+        177,
+        181
+      ],
+      "viewer": [
+        229,
+        233
+      ]
+    },
+    "4.7": {
+      "printed": [
+        182,
+        188
+      ],
+      "viewer": [
+        234,
+        240
+      ]
+    }
+  },
+  "prior_upload_status": "Not confirmed from accessible project files or Lab 2 chat; this exact path was explicitly supplied in the current Lab 3 chat.",
+  "manual": "Lab Manual_ Labs 03.pdf, physical PDF page 1, printed page 5",
+  "manual_sha256": "8ad1417f7a66722c52db88075d2a17bbfab99f7d125709ec15d8dcd66f773553",
+  "global_rules": "Lab Manual_ Labs 01.pdf, pages 1-2"
+}

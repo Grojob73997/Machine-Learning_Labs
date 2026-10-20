@@ -1,0 +1,20 @@
+{
+  "python": "3.11.8",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+  "logical_cpus": 16,
+  "torch": "2.3.1+cpu",
+  "device": "cpu",
+  "dtype": "float32",
+  "intraop_threads": 4,
+  "interop_threads": 1,
+  "seed": 42,
+  "deterministic_algorithms": true,
+  "mkldnn": true,
+  "mha_fastpath_for_latency": true,
+  "train_epochs": 5,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "optimizer": "Adam",
+  "timestamp": "2026-10-20T19:48:21+0200"
+}

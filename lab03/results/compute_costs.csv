@@ -1,0 +1,4 @@
+model,parameters,torchinfo_parameters,manual_flops,native_thop_ops,twice_native_thop_ops,native_thop_parameters,aligned_thop_macs,aligned_thop_flops,aligned_thop_parameters,native_gap_flops
+MLP,235146,235146,469504,234752.0,469504.0,235146.0,234752.0,469504.0,235146.0,0.0
+CNN,20490,20490,2063488,1031744.0,2063488.0,20490.0,1031744.0,2063488.0,20490.0,0.0
+Attention,70794,70794,2329856,591488.0,1182976.0,37514.0,1164928.0,2329856.0,70794.0,1146880.0

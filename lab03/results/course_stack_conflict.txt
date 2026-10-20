@@ -1,0 +1,11 @@
+Attempted: uv pip install --python .venv-lab2/Scripts/python.exe -r requirements.txt
+
+Resolver result:
+No solution found when resolving dependencies:
+Because mlflow==2.14.1 depends on pyarrow>=4.0.0,<16 and you require
+mlflow==2.14.1, we can conclude that you require pyarrow>=4.0.0,<16.
+And because you require pyarrow==16.1.0, we can conclude that your
+requirements are unsatisfiable.
+
+Resolution for this experiment: retain the course-wide file unchanged and install
+only the exactly pinned packages used by Lab 2 from lab02/requirements-lab02.txt.

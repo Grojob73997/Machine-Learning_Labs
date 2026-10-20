@@ -1,0 +1,6 @@
+[91m[WARN] Cannot find rule for <class 'torch.nn.modules.flatten.Flatten'>. Treat it as zero Macs and zero Params.
+[00m[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
+[91m[WARN] Cannot find rule for <class 'models.MLP'>. Treat it as zero Macs and zero Params.
+[00m[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.activation.ReLU'>.
