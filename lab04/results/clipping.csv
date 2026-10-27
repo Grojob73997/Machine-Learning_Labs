@@ -1,0 +1,7 @@
+column,lower,upper,train_values_clipped
+age,17,74,302
+fnlwgt,27035.200000000001,509629,683
+education-num,3,16,240
+capital-gain,0,15024,255
+capital-loss,0,1980,340
+hours-per-week,8,80,537

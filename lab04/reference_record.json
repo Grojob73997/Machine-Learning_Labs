@@ -1,0 +1,40 @@
+{
+  "manual_source": "C:\\Users\\rojob\\Downloads\\Lab Manual_ Labs 04.pdf",
+  "manual_sha256": "f41eb8f4a3ba02ffa0be3d3fb3b69d9b583f36ba8e5266b98f1bffc7ad3ecb3d",
+  "manual_pdf_page": 1,
+  "manual_printed_page": 6,
+  "textbook_source": "E:\\introduction-to-machine-learning-systems_compress.pdf",
+  "textbook_sha256": "364ed2c2f3c620cf4202eb8ec77f37bda21e10cff7e37f59815fef81af3e6c9a",
+  "textbook_edition": "July 31, 2025",
+  "printed_to_viewer_offset": 52,
+  "reading": {
+    "5.2-5.5": {
+      "printed": [
+        206,
+        217
+      ],
+      "viewer": [
+        258,
+        269
+      ]
+    },
+    "6.2-6.8": {
+      "printed": [
+        242,
+        288
+      ],
+      "viewer": [
+        294,
+        340
+      ]
+    }
+  },
+  "global_rules_source": "Lab Manual_ Labs 01.pdf, physical pp.1-2",
+  "dictionary": "https://archive.ics.uci.edu/dataset/2/adult",
+  "dataset_doi": "https://doi.org/10.24432/C5XW20",
+  "openml": "https://www.openml.org/d/1590",
+  "source_license_checked": "2026-10-27",
+  "uci_license": "CC BY 4.0",
+  "openml_license_metadata": "Public",
+  "note": "AI-assisted code and draft documentation; human 50-row review pending"
+}

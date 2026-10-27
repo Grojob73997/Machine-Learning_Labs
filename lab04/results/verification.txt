@@ -1,0 +1,12 @@
+test_derived_values_and_denominator_guard (test_pipeline.PipelineTests.test_derived_values_and_denominator_guard) ... ok
+test_duplicate_conflict_audit_includes_missing_features (test_pipeline.PipelineTests.test_duplicate_conflict_audit_includes_missing_features) ... ok
+test_holdout_extremes_and_new_categories_do_not_change_training_state (test_pipeline.PipelineTests.test_holdout_extremes_and_new_categories_do_not_change_training_state) ... ok
+test_missing_markers_are_permitted_and_target_missing_is_rejected (test_pipeline.PipelineTests.test_missing_markers_are_permitted_and_target_missing_is_rejected) ... ok
+test_train_medians_modes_quantiles_match_independent_expected_values (test_pipeline.PipelineTests.test_train_medians_modes_quantiles_match_independent_expected_values) ... ok
+test_validation_reports_bad_values_without_mutating_or_dropping (test_pipeline.PipelineTests.test_validation_reports_bad_values_without_mutating_or_dropping) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.110s
+
+OK
+PASS: independent train medians, modes and percentiles; source/split IDs; fresh-process joblib reload; both saved prediction arrays and scores; processed train/test matrices; raw and processed SHA256.

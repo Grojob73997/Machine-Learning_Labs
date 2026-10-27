@@ -1,0 +1,41 @@
+LAB 4 - G M Robi Farhan Rojob - 73997
+
+1. Open your existing course project with lab01, lab02 and lab03.
+2. Select the tested Python 3.11.8 interpreter:
+   C:\Users\rojob\Documents\ChatGPT\Machine Learning\.venv-lab2\Scripts\python.exe
+3. Open lab04/main.py, right-click, and choose Run 'main'.
+   The root main.py still launches Lab 2.
+4. Wait for COMPLETE. The script downloads only if OpenML cache is missing.
+5. Read lab04/report.md, data_card.md and results/validation_report.md.
+
+One-command run from the course root:
+python lab04/main.py
+
+The folder name .venv-lab2 is historical; it now has the required Lab 4
+packages. If setting up a different computer: install Python 3.11.8,
+create a virtual environment, then run:
+python -m pip install -r lab04/requirements-lab04.txt
+
+Expected measured results in the supplied run:
+baseline:   accuracy 0.853955; positive-class F1 0.660102
+engineered: accuracy 0.857777; positive-class F1 0.669626
+
+The script saves train-fitted preprocessors, both classifiers and predictions,
+split IDs, schema/quality reports, config/hash, plot and full version evidence.
+It repeats both fits and checks identical matrices, probabilities, predictions
+and processed CSV SHA256. Six focused tests and fresh-process artifact
+verification run automatically. No GUI plot window is needed.
+
+To verify existing artifacts without fitting models again:
+python lab04/src/verify_lab.py
+
+Review the 50 raw rows in results/audit_sample_50.csv against the dictionary.
+Fill your findings, reviewer and date in results/manual_review_50.csv.
+See manual_review_instructions.md. This human work is still pending.
+Review and rewrite the draft report conclusions in your own words.
+Rerunning regenerates reports/measurements but preserves the manual worksheet;
+keep a copy of your personalized report before rerunning.
+
+The submission ZIP excludes datasets and environments. The same source can
+download/recreate them. Keep data/openml and data/lab04 for offline use.
+Bring references/Lab Manual_ Labs 04.pdf to class, printed or digital.

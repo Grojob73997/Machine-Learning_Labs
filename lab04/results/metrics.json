@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "baseline",
+    "input_features": 14,
+    "encoded_features": 105,
+    "train_rows": 34165,
+    "test_rows": 14653,
+    "accuracy": 0.8539548215382515,
+    "f1": 0.6601016518424396,
+    "train_accuracy": 0.8512805502707449,
+    "train_f1": 0.6564338359591588,
+    "iterations": 61,
+    "confusion_matrix_tn_fp_fn_tp": [
+      10435,
+      712,
+      1428,
+      2078
+    ]
+  },
+  {
+    "variant": "engineered",
+    "input_features": 16,
+    "encoded_features": 107,
+    "train_rows": 34165,
+    "test_rows": 14653,
+    "accuracy": 0.8577765645260357,
+    "f1": 0.6696258719086874,
+    "train_accuracy": 0.8543831406410068,
+    "train_f1": 0.6648703267093298,
+    "iterations": 75,
+    "confusion_matrix_tn_fp_fn_tp": [
+      10457,
+      690,
+      1394,
+      2112
+    ]
+  }
+]

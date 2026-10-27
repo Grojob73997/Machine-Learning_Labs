@@ -1,0 +1,12 @@
+{
+  "conflicting_feature_groups": 5,
+  "rows_in_conflicting_groups": 10,
+  "exact_duplicate_excess_rows": 52,
+  "feature_duplicate_excess_rows": 57,
+  "test_rows_matching_train_full_row": 24,
+  "test_rows_matching_train_features": 27,
+  "sample_size": 50,
+  "sample_impossible_values": 0,
+  "manual_review_status": "Pending student review: results/manual_review_50.csv",
+  "label_limit": "Dictionary and duplicate consistency cannot verify actual personal income"
+}

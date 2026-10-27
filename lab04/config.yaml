@@ -1,0 +1,29 @@
+dataset:
+  name: adult
+  version: 2
+  expected_openml_id: '1590'
+  expected_rows: 48842
+  expected_columns: 15
+  raw_target: class
+  target: income
+  positive_label: '>50K'
+seed: 42
+test_size: 0.30
+preprocessing:
+  numeric_imputer: median
+  categorical_imputer: most_frequent
+  clip_quantiles: [0.01, 0.99]
+  duplicate_policy: exact_full_rows_train_only_keep_first_before_imputation
+  numeric_scaling: StandardScaler
+  categorical_encoding: OneHotEncoder_handle_unknown_ignore
+  derived_order: after_imputation_and_clipping_before_scaling
+  derived_features:
+    capital_net: capital-gain - capital-loss
+    hours_per_age: hours-per-week / (age - 16)
+model:
+  solver: lbfgs
+  C: 1.0
+  max_iter: 2000
+  tol: 0.0001
+  threshold: 0.5
+audit_sample_size: 50

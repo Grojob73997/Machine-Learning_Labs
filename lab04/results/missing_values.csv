@@ -1,0 +1,16 @@
+column,schema_type,storage_dtype,null_count,question_mark_count,missing_total
+age,int,int64,0,0,0
+workclass,category,category,2799,0,2799
+fnlwgt,int,int64,0,0,0
+education,category,category,0,0,0
+education-num,int,int64,0,0,0
+marital-status,category,category,0,0,0
+occupation,category,category,2809,0,2809
+relationship,category,category,0,0,0
+race,category,category,0,0,0
+sex,category,category,0,0,0
+capital-gain,int,int64,0,0,0
+capital-loss,int,int64,0,0,0
+hours-per-week,int,int64,0,0,0
+native-country,category,category,857,0,857
+income,category,category,0,0,0

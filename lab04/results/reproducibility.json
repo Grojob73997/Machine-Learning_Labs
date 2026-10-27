@@ -1,0 +1,13 @@
+{
+  "split_disjoint": true,
+  "fit_ids_are_kept_train": true,
+  "raw_unchanged": true,
+  "test_frame_unchanged": true,
+  "no_duplicate_full_train_rows": true,
+  "test_row_count_preserved": true,
+  "reload_transform_identical": true,
+  "replay_performed": true,
+  "second_fit_arrays_and_predictions_identical": true,
+  "replay_split_ids_identical": true,
+  "processed_sha256_matches_second_fit": true
+}
